@@ -209,7 +209,7 @@ endfunction
 
 
 function! s:get_version() " {{{2
-  return split(matchstr(ref#system(ref#to_list(g:ref_ri_cmd, '--version')).stdout, '^ri \zs.*\ze$'), '\.')
+  return split(matchstr(ref#system(ref#to_list(g:ref_ri_cmd, '--version')).stdout, '^ri\(\.cmd\)* \zs.*\ze$'), '\.')
 endfunction
 
 function! s:ri(args) " {{{2
